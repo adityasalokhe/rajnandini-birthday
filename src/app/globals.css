@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* -------------------------------------------------------------
+   FRESH FLORAL LUXURY DESIGN SYSTEM FOR RAJNANDINI
+   Palette:
+   - Warm Ivory:      #FFF9F5
+   - Blush Pink:      #F5DDE3
+   - Dusty Rose:      #C98291
+   - Soft Sage Green: #DCE6D8
+   - Champagne:       #F4E3C9
+   - Warm Mauve:      #73545B
+   ------------------------------------------------------------- */
+
+@layer base {
+  :root {
+    --bg-ivory: #FFF9F5;
+    --bg-cream: #FBF4EE;
+    --color-blush-soft: #FAF0F3;
+    --color-blush: #F5DDE3;
+    --color-dusty-rose: #C98291;
+    --color-sage: #DCE6D8;
+    --color-sage-deep: #A4BDA0;
+    --color-champagne: #F4E3C9;
+    --color-mauve: #73545B;
+    --color-mauve-dark: #52373E;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: #FFF9F5;
+    color: #73545B;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom selection */
+  ::selection {
+    background-color: #F5DDE3;
+    color: #C98291;
+  }
+}
+
+/* Typography Helpers */
+.font-luxury-serif {
+  font-family: 'Bodoni Moda', 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+}
+
+.font-handwriting {
+  font-family: 'Great Vibes', 'Alex Brush', cursive, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5B6C0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C98291;
+}
+
+/* Dreamy Glow and Lighting */
+.rose-gold-gradient {
+  background: linear-gradient(135deg, #C98291 0%, #F5DDE3 50%, #C98291 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #8E4E5D 0%, #C98291 40%, #73545B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-shimmer {
+  background: linear-gradient(90deg, #73545B 0%, #C98291 35%, #F4E3C9 50%, #C98291 65%, #73545B 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+/* Luxury Rose Gold Foil Typography & Shimmer */
+.text-rose-gold-foil {
+  background: linear-gradient(
+    135deg,
+    #5E333F 0%,
+    #8E4657 18%,
+    #C98291 36%,
+    #FFF4F7 50%,
+    #F4E3C9 58%,
+    #C98291 68%,
+    #73545B 85%,
+    #4E2833 100%
+  );
+  background-size: 250% 250%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: foilShimmer 7s ease-in-out infinite alternate;
+}
+
+@keyframes foilShimmer {
+  0% {
+    background-position: 0% 35%;
+  }
+  50% {
+    background-position: 100% 65%;
+  }
+  100% {
+    background-position: 0% 35%;
+  }
+}
+
+.luxury-invitation-card {
+  box-shadow: 
+    0 1px 3px rgba(115, 84, 91, 0.04),
+    0 20px 50px -15px rgba(201, 130, 145, 0.14),
+    0 40px 90px -25px rgba(115, 84, 91, 0.1),
+    inset 0 0 90px rgba(245, 221, 227, 0.45);
+}
+
+.luxury-text-shadow {
+  filter: drop-shadow(0 4px 18px rgba(115, 84, 91, 0.2));
+}
+
+.romantic-glow {
+  box-shadow: 0 10px 40px -10px rgba(201, 130, 145, 0.35);
+}
+
+.romantic-glow-lg {
+  box-shadow: 0 20px 60px -15px rgba(201, 130, 145, 0.45);
+}
+
+.candle-glow {
+  filter: drop-shadow(0 0 12px rgba(255, 178, 102, 0.95)) drop-shadow(0 0 24px rgba(255, 133, 51, 0.6));
+}
+
+/* Keyframe animations */
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+  }
+  25% {
+    transform: scale(1.06, 0.96) rotate(1deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.95, 1.05) rotate(-1.5deg);
+    opacity: 0.9;
+  }
+  75% {
+    transform: scale(1.03, 0.98) rotate(1.5deg);
+    opacity: 0.98;
+  }
+}
+
+@keyframes smokePuff {
+  0% {
+    transform: translateY(0) scale(0.4);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-40px) scale(1.8);
+    opacity: 0;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+.animate-flicker {
+  animation: flicker 1.8s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+.animate-smoke {
+  animation: smokePuff 1.8s ease-out forwards;
+}
+
+/* Envelope 3D preserve */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Respect user reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
